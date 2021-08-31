@@ -18,7 +18,7 @@ cp -r $RPR_CONFIG_DIR build/tmp
 cp $RPR_CONFIG_DIR/KeyMaps/ImportScripts_MasteringExplained_StarterPack.ReaperKeyMap build/tmp/$RPR_CONFIG_DIR/reaper-kb.ini
 cp $RPR_CONFIG_DIR/MenuSets/Toolbar_MasteringExplained_StarterPack.ReaperMenu build/tmp/$RPR_CONFIG_DIR/reaper-menu.ini
 cp $RPR_CONFIG_DIR/FXChains/Monitor_FX-Chain_ME_StarterPack.RfxChain build/tmp/$RPR_CONFIG_DIR/reaper-hwoutfx.ini
-cp $RPR_CONFIG_DIR/MouseMaps/MouseModifiers_ME_StarterPack.ReaperMouseMap_ITEMFADE build/tmp/$RPR_CONFIG_DIR/reaper-mouse.ini
+cp $RPR_CONFIG_DIR/MouseMaps/MouseModifiers_ME_StarterPack.ReaperMouseMap build/tmp/$RPR_CONFIG_DIR/reaper-mouse.ini
 
 # Copy .ini files
 cp $RPR_INI_DIR/reaper.ini build/tmp/$RPR_CONFIG_DIR/reaper.ini

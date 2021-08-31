@@ -1,0 +1,10 @@
+[MM_CTX_ITEM_CLK]
+mm_0=3
+
+[MM_CTX_ITEMFADE]
+mm_4=13
+
+[MM_CTX_MIDI_NOTE_CLK]
+mm_0=1
+mm_4=2
+
