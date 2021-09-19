@@ -65,6 +65,7 @@
 // 3.3: Small fixes 
 // 3.3-me0.1: elecburger mod! See description above for details
 // 3.3-me0.2: Add Stereo/Mono/Side/Flip/Left/Right control
+// 3.3-me0.3: Set max gain for source (20 dB) + stop adjusting when signal is below -40 LUFS
 
 desc:AB Level Matching Control (TBProAudio) - ME Starter Pack mod
 options:gmem=TBProAudio_AB_LM
@@ -134,7 +135,16 @@ local(slider40_t, slider42_t)
     slider34 = AudioMeasure_Final.AM_GetTruePeakValMax_db();
 
     // Post Gain Stage
-    slider40_t = AudioMeasure_Final.AM_GetRMSSTValI_db() - AudioMeasure_Source.AM_GetRMSSTValI_db();
+    level_final = AudioMeasure_Final.AM_GetRMSSTValI_db();
+    level_source = AudioMeasure_Source.AM_GetRMSSTValI_db();
+
+    (level_final < -40) || (level_source < -40) ? (
+        slider40_t = 0;
+    ) : (
+        slider40_t = AudioMeasure_Final.AM_GetRMSSTValI_db() - AudioMeasure_Source.AM_GetRMSSTValI_db();
+        // slider40_t = level_final - level_source;
+    );
+
     slider40 = dround(slider40_t, 1);
     //SGain.SParam_Set(slider40);   
     (slider41 == 1) || ((slider41 == 3) && (slider2 == 1))?
@@ -142,7 +152,7 @@ local(slider40_t, slider42_t)
     
       (PG_CountDown.CountDown_Check()) ?
       (
-        slider42_t = slider40_t;
+        slider42_t = min(slider40_t, postgain_limit);
         slider42 = dround(slider42_t, 1);
         post_gain_max_db = max(post_gain_max_db,slider42); 
         //slider42 = -dround(SGain.SParam_Get(),1);
@@ -208,7 +218,8 @@ post_gain = 1.0;
 SGain.SParam_Init_smp(20,0);
 
 // GainLimit
-postgain_limit = slider43;
+// postgain_limit = slider43;
+postgain_limit = 20;
 
 // EO@init
 
@@ -237,7 +248,7 @@ postgain_limit = slider43;
   // Post Peak Gain
   post_gain_peak = 1.0;
   
-  postgain_limit = slider43;
+  // postgain_limit = slider43;
   
   // Reset
   (slider60)?
