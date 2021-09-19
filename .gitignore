@@ -2,3 +2,4 @@
 build/
 test_install/
 add_to_test/
+.sync-conflict*
