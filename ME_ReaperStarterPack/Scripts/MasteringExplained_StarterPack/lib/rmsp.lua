@@ -115,6 +115,41 @@ function rmsp.SetMonitor(val)
 	mon.Update_command_states()
 end
 
+function rmsp.CreateRegionsFromItems()
+	selitems = reaper.CountSelectedMediaItems(0)
+
+	if selitems == 0 then
+		return
+	end
+
+	retval, ret_csv = reaper.GetUserInputs("Regions from items", 2, "Pre-gap (s),Post-gap (s)", "0.2,2")
+
+	if not retval then
+		return
+	end
+
+	pregap, postgap = ret_csv:match("(.+),(.+)")
+	cursor_pos = reaper.GetCursorPositionEx(0)
+	time_sel_start, time_sel_end = reaper.GetSet_LoopTimeRange2(0, false, false, 0, 0, false)
+
+	for n = 0, selitems - 1, 1 do
+		local item = reaper.GetSelectedMediaItem(0, n)
+
+		local take = reaper.GetActiveTake(item)
+		_, take_name = reaper.GetSetMediaItemTakeInfo_String(take, "P_NAME", "", false)
+
+		take_name = take_name:gsub(".wav$", "")
+
+		item_pos = reaper.GetMediaItemInfo_Value(item, "D_POSITION")
+		item_length = reaper.GetMediaItemInfo_Value(item, "D_LENGTH")
+
+		reaper.AddProjectMarker2(0, true, item_pos - pregap, item_pos + item_length + postgap, take_name or "", 1, 0)
+	end
+
+	reaper.SetEditCurPos2(0, cursor_pos, false, false)
+	reaper.GetSet_LoopTimeRange2(0, true, false, time_sel_start, time_sel_end, false)
+end
+
 function rmsp.Startup()
 	require("lib/me_monitor").Update_command_states()
 
