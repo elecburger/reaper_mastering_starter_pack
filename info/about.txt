@@ -2,9 +2,11 @@ Welcome to the Mastering Explained REAPER Starter Pack!
 
 This package contains a pre-made configuration with additional scripts for the REAPER DAW that will help you get started mastering. 
 
-It is used in the course "Audio Mastering Fundamentals" from Mastering Explained.
+It is used in the course "Audio Mastering Fundamentals" from Mastering Explained. The mastering starter pack is made for educational purposes to help you learn mastering more easily in this course. 
 
 See https://www.masteringexplained.com/mastering-course for more details!
+
+All use is at your own risk. We don’t take any responsibility for bugs, but appreciate feedback so that we can fix them.
 
 Please note that a license for REAPER is NOT included in this package.
 
