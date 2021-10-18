@@ -4,14 +4,14 @@ A configuration for the [Reaper DAW](https://www.reaper.fm) made for learning au
 
 The starter pack is distributed as a portable installation of Reaper without the [Reaper binaries](https://www.reaper.fm/download.php). 
 
-##Features
+## Features
 
 * Automated loudness matching
 * A project template for mastering
 * Tweaked settings and custom scripts that will improve the mastering workflow
 * A custom toolbar to help you get started in Reaper
 
-##Building
+## Building
 
 The building process will produce a zip file with the directory containing the portable installation. Pre-built zip-files and installation instructions can be [found here](https://www.masteringexplained.com/starterpack/).
 
