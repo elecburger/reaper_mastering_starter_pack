@@ -42,5 +42,5 @@ reaper_mastering_starter_pack/
 ./build.sh
 ```
 
-4. If all goes well, the zip file can be found in `build/` and the test installation directory in `build/test/`.
+4. If all goes well, the zip file can be found in `build/release/` and the test installation directory in `build/test/`.
 
