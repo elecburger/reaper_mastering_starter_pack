@@ -24,7 +24,7 @@ git clone ...
 cd reaper_mastering_starter_pack
 ```
 
-2. The build script will leave a copy of the installation directory under `build/test/`. Files in the `add_to_test/` directory will also be added to this test directory. Place for example `REAPER.app/`, `reaper-\*plugins\*.ini` etc here to be able to quickly test the build.
+2. The build script will leave a copy of the installation directory under `build/test/`. Files in the `add_to_test/` directory will also be added to this test directory. Place for example `REAPER.app/`, `reaper-vstplugins64.ini` etc here to be able to quickly test the build.
 
 ```
 reaper_mastering_starter_pack/
