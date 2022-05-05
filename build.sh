@@ -2,7 +2,13 @@
 
 RPR_CONFIG_DIR=ME_ReaperStarterPack
 RPR_INI_DIR=ini
-VERSION=$( cat info/version.txt )
+
+if [ $1 ] && [ $1 = "test" ] 
+then
+  SUFFIX="-$( date +%Y%m%d%H%M%S )"
+fi
+
+VERSION=$( cat info/version.txt )$SUFFIX
 
 mkdir -p build/test
 mkdir -p build/release
