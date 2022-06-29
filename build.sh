@@ -29,6 +29,7 @@ cp $RPR_CONFIG_DIR/MouseMaps/MouseModifiers_ME_StarterPack.ReaperMouseMap build/
 
 # Copy .ini files
 cp $RPR_INI_DIR/reaper.ini build/test/$RPR_CONFIG_DIR/reaper.ini
+cp $RPR_INI_DIR/reaper-metadata.ini build/test/$RPR_CONFIG_DIR/reaper-metadata.ini
 
 # Copy license, version, whatsnew and about files
 cp LICENSE build/test/$RPR_CONFIG_DIR/Scripts/MasteringExplained_StarterPack/lib/LICENSE

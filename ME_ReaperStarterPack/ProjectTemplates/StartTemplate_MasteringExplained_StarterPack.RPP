@@ -1,4 +1,4 @@
-<REAPER_PROJECT 0.1 "6.56/OSX64" 1651790755
+<REAPER_PROJECT 0.1 "6.61/OSX64" 1656508467
   <NOTES 0 0
     |The Mastering Explained Starter Pack
   >
@@ -41,6 +41,43 @@
   RENDER_ADDTOPROJ 1
   RENDER_STEMS 0
   RENDER_DITHER 1
+  <RENDER_METADATA
+    TAG APE:Album $title
+    TAG APE:Artist $author
+    TAG APE:ISRC $marker(ISRC)
+    TAG APE:Title $region
+    TAG ASWG:artist $author
+    TAG ASWG:isrcId $marker(ISRC)
+    TAG ASWG:project $region
+    TAG AXML:ISRC $marker(ISRC)
+    TAG CAFINFO:album $title
+    TAG CAFINFO:artist $author
+    TAG CAFINFO:title $region
+    TAG CART:Artist $author
+    TAG CART:Title $region
+    TAG CUE:DISC_PERFORMER $author
+    TAG CUE:DISC_TITLE $region
+    TAG ID3:TALB $title
+    TAG ID3:TIT2 $region
+    TAG ID3:TPE1 $author
+    TAG ID3:TPE2 $author
+    TAG ID3:TSRC $marker(ISRC)
+    TAG IFF:AUTH $author
+    TAG IFF:NAME $region
+    TAG INFO:IART $author
+    TAG INFO:INAM $region
+    TAG INFO:IPRD $title
+    TAG IXML:PROJECT $region
+    TAG VORBIS:ALBUM $title
+    TAG VORBIS:ALBUMARTIST $author
+    TAG VORBIS:ARTIST $author
+    TAG VORBIS:ISRC $marker(ISRC)
+    TAG VORBIS:PERFORMER $author
+    TAG VORBIS:TITLE $region
+    TAG XMP:dc/title $region
+    TAG XMP:dm/album $title
+    TAG XMP:dm/artist $author
+  >
   TIMELOCKMODE 1
   TEMPOENVLOCKMODE 1
   ITEMMIX 0
@@ -105,7 +142,7 @@
     BUSCOMP 0 0 0 0 0
     SHOWINMIX 1 0.6667 0.5 1 0.5 -1 -1 -1
     SEL 0
-    REC 0 0 1 0 0 0 0
+    REC 0 0 1 0 0 0 0 0
     VU 2
     TRACKHEIGHT 0 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
@@ -135,7 +172,7 @@
     BUSCOMP 0 0 0 0 0
     SHOWINMIX 1 0.6667 0.5 1 0.5 -1 -1 -1
     SEL 0
-    REC 0 0 1 0 0 0 0
+    REC 0 0 1 0 0 0 0 0
     VU 2
     TRACKHEIGHT 0 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
@@ -160,7 +197,7 @@
     BUSCOMP 0 0 0 0 0
     SHOWINMIX 1 0.6667 0.5 1 0.5 -1 -1 -1
     SEL 0
-    REC 0 0 1 0 0 0 0
+    REC 0 0 1 0 0 0 0 0
     VU 2
     TRACKHEIGHT 0 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
