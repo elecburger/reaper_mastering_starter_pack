@@ -15,7 +15,7 @@ The starter pack is distributed as a portable installation of Reaper without the
 
 The building process will produce a zip file with the directory containing the portable installation. Pre-built zip-files and installation instructions can be [found here](https://www.masteringexplained.com/starterpack/).
 
-The zip file is built by a bash script. This is only tested on MacOS, but should work in Linux or Windows (using WSL) as well. 
+The zip file is built by a bash script. This is only tested on MacOS, but might work in Linux or Windows (using WSL) as well. 
 
 1. Clone the repo and enter the directory
 
