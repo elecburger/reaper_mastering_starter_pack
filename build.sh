@@ -19,7 +19,19 @@ mkdir -p add_to_test
 rm -rf build/test/$RPR_CONFIG_DIR
 cp -r $RPR_CONFIG_DIR build/test
 
-# TODO Create ReaperConfigZip here
+# Copy license, version, whatsnew and about files
+cp LICENSE build/test/$RPR_CONFIG_DIR/Scripts/MasteringExplained_StarterPack/lib/LICENSE
+cp info/version.txt build/test/$RPR_CONFIG_DIR/Scripts/MasteringExplained_StarterPack/lib/version.txt
+cp info/whatsnew.txt build/test/$RPR_CONFIG_DIR/Scripts/MasteringExplained_StarterPack/lib/whatsnew.txt
+cp info/about.txt build/test/$RPR_CONFIG_DIR/Scripts/MasteringExplained_StarterPack/lib/about.txt
+
+# Create ReaperConfigZip
+ZIPNAME=$RPR_CONFIG_DIR-Update-$VERSION.ReaperConfigZip
+rm build/release/$ZIPNAME
+cd build/test/$RPR_CONFIG_DIR
+zip -r ../../release/$ZIPNAME . --no-dir-entries -x "**/.DS_Store" -x .DS_Store
+# cd ..
+cd ../../..
 
 # Create .ini files from Reaper import/export files
 cp $RPR_CONFIG_DIR/KeyMaps/ImportScripts_MasteringExplained_StarterPack.ReaperKeyMap build/test/$RPR_CONFIG_DIR/reaper-kb.ini
