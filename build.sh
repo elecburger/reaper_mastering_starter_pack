@@ -43,11 +43,8 @@ cp $RPR_CONFIG_DIR/MouseMaps/MouseModifiers_ME_StarterPack.ReaperMouseMap build/
 cp $RPR_INI_DIR/reaper.ini build/test/$RPR_CONFIG_DIR/reaper.ini
 cp $RPR_INI_DIR/reaper-metadata.ini build/test/$RPR_CONFIG_DIR/reaper-metadata.ini
 
-# Copy license, version, whatsnew and about files
-cp LICENSE build/test/$RPR_CONFIG_DIR/Scripts/MasteringExplained_StarterPack/lib/LICENSE
-cp info/version.txt build/test/$RPR_CONFIG_DIR/Scripts/MasteringExplained_StarterPack/lib/version.txt
-cp info/whatsnew.txt build/test/$RPR_CONFIG_DIR/Scripts/MasteringExplained_StarterPack/lib/whatsnew.txt
-cp info/about.txt build/test/$RPR_CONFIG_DIR/Scripts/MasteringExplained_StarterPack/lib/about.txt
+# Copy __startup.lua
+cp $RPR_CONFIG_DIR/Scripts/MasteringExplained_StarterPack/lib/__startup.lua build/test/$RPR_CONFIG_DIR/Scripts/__startup.lua
 
 # Create zip-file
 cd build/test/
